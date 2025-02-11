@@ -12,12 +12,12 @@ provider "aws" {
   secret_key = var.secret_key
 }
 resource "aws_instance" "myec2" {
- 
-  ami           = var.my_ami
+ ami           = var.my_ami
   instance_type = "t2.micro"
   tags = {
     Name = "myinstance "
   }
+}
 variable "my_region" {
 type = string
 default = "ap-south-1"
